@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-03-31 08:54:45
+ * @LastEditTime: 2022-03-31 15:38:59
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \html\vue_2\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../3D表白相册/3D相册/img/01.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <script src="./index.js"></script>
+    <script src="./axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>用户姓名</th>
+                    <th>用户性别</th>
+                    <th>所在城市</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(list, index) in lists" :key="index">
+                    <th><input type="checkbox" v-model="list.check"></th>
+                    <td>{{list.name}}</td>
+                    <td>{{list.sex}}</td>
+                    <td>{{list.city}}</td>
+                    <td><button disabled="true">删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
